@@ -1,4 +1,4 @@
-<?php
+<?php namespace Timecapsl;
 
 class ContactForm {
   public $email = '';

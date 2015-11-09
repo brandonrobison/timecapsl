@@ -1,8 +1,7 @@
-<?php
+<?php namespace Timecapsl;
+
 require __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/config.php';
-require_once __DIR__ . '/includes/questionnaire_form.php';
-require_once __DIR__ . '/includes/utility.php';
 
 // questionnaire.php
 // Sends an email from the site new client / pre interview questionnaire to the site admin
@@ -11,7 +10,7 @@ require_once __DIR__ . '/includes/utility.php';
 function sendContactFormEmail($form) {
   global $config;
   $mailerConfig = $config['PHPMailer'];
-  $mail = new PHPMailer;
+  $mail = new \PHPMailer;
 
   $mail->isSMTP();
   $mail->SMTPAuth = true;
@@ -36,8 +35,8 @@ function sendContactFormEmail($form) {
 
 // Renders the email template for the contact form.
 function renderContactFormEmail($form) {
-  $loader = new Twig_Loader_Filesystem(__DIR__ . '/templates');
-  $twig = new Twig_Environment($loader, array());
+  $loader = new \Twig_Loader_Filesystem(__DIR__ . '/templates');
+  $twig = new \Twig_Environment($loader, array());
 
   return $twig->render('emails/questionnaire_form.html', $form->data());
 }

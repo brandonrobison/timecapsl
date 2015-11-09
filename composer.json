@@ -3,5 +3,8 @@
         "phpmailer/phpmailer": "~5.2",
         "twig/twig": "~1.0",
         "google/recaptcha": "~1.1"
+    },
+    "autoload": {
+        "psr-4": {"Timecapsl\\": "includes/"}
     }
 }

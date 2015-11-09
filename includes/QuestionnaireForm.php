@@ -1,4 +1,4 @@
-<?php
+<?php namespace Timecapsl;
 
 class QuestionnaireForm {
   public $name = '';
@@ -73,6 +73,3 @@ class QuestionnaireForm {
     );
   }
 }
-
-
-
