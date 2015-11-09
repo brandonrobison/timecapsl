@@ -1,8 +1,8 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/config.php';
-require_once __DIR__ . '/questionnaire_form.php';
-require_once __DIR__ . '/utility.php';
+require_once __DIR__ . '/includes/questionnaire_form.php';
+require_once __DIR__ . '/includes/utility.php';
 
 // questionnaire.php
 // Sends an email from the site new client / pre interview questionnaire to the site admin
