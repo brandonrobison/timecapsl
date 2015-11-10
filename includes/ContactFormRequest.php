@@ -3,7 +3,14 @@
 class ContactFormRequest {
   public function __construct($config, $templateName) {
     $this->config = $config;
-    $this->templateName = $templateName;
+    $this->template = $this->lookupTemplate($templateName);
+  }
+
+  function lookupTemplate($templateName) {
+    return array_merge(
+      $this->config['FormMailerTemplates']['default'],
+      $this->config['FormMailerTemplates'][$templateName]
+    );
   }
 
   function processRequest($form) {
@@ -50,12 +57,12 @@ class ContactFormRequest {
     $mail->Password = $mailerConfig['Password'];
     $mail->SMTPSecure = $mailerConfig['SMTPSecure'];
     $mail->Port = $mailerConfig['Port'];
-    $mail->setFrom('webmaster@timecap.sl');
-    $mail->addAddress('me@brandonrobison.com');
+    $mail->setFrom($this->template['from']);
+    $mail->addAddress($this->template['to']);
     $mail->addReplyTo($form->email, $form->name);
     $mail->isHTML(false);
 
-    $mail->Subject = "Contact form submitted by: $form->name";
+    $mail->Subject = $this->subject($form);
     $mail->Body = $this->renderContactFormEmail($form);
     if (!$mail->send()) {
       return new TimecapslError('Message could not be sent. ' . 'Mailer Error: ' . $mail->ErrorInfo);
@@ -64,10 +71,17 @@ class ContactFormRequest {
     return new TimecapslSuccess($form);
   }
 
+  function subject($form) {
+    if (is_callable($this->template['subject'])) {
+      return $this->template['subject']($form);
+    }
+    return $this->template['subject'];
+  }
+
   function renderContactFormEmail($form) {
     $loader = new \Twig_Loader_Filesystem(__DIR__ . '/../templates');
     $twig = new \Twig_Environment($loader, array());
 
-    return $twig->render('emails/contact_form.html', $form->data());
+    return $twig->render($this->template['template'], $form->data());
   }
 }
