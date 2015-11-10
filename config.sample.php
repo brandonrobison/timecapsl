@@ -40,5 +40,11 @@ $config['FormMailerTemplates'] = array(
       return "New Client / Pre-Interview Questionnaire from $form->name";
     },
     'template' => 'emails/questionnaire_form.html'
+  ),
+  'storyteller_form' => array(
+    'subject' => function ($form) {
+      return "New Storyteller Submission from $form->name";
+    },
+    'template' => 'emails/storyteller_form.html'
   )
 );
