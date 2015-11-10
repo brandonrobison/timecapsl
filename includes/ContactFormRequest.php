@@ -59,7 +59,9 @@ class ContactFormRequest {
     $mail->Port = $mailerConfig['Port'];
     $mail->setFrom($this->template['from']);
     $mail->addAddress($this->template['to']);
-    $mail->addReplyTo($form->email, $form->name);
+    if ($this->template['replyTo']) {
+      $mail->addReplyTo($form->email, $form->name);
+    }
     $mail->isHTML(false);
 
     $mail->Subject = $this->subject($form);

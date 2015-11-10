@@ -21,16 +21,19 @@ $config['ReCaptcha'] = array(
 // * from - the email address from which the form data will be sent.
 // * subject - a string or function that will generate the subject line.
 // * template - the path to the email template.
+// * replyTo - whether or not to include a reply-to based on the form.
 $config['FormMailerTemplates'] = array(
   'default' => array(
     'to' => 'me@brandonrobison.com',
-    'from' => 'webmaster@timecap.sl'
+    'from' => 'webmaster@timecap.sl',
+    'replyTo' => false
   ),
   'contact_form' => array(
     'subject' => function ($form) {
       return "Contact form submitted by: $form->name";
     },
-    'template' => 'emails/contact_form.html'
+    'template' => 'emails/contact_form.html',
+    'replyTo' => true
   ),
   'questionnaire' => array(
     'subject' => function ($form) {
