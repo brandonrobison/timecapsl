@@ -24,10 +24,10 @@ $(function() {
       event.preventDefault(); // prevent default submit behaviour
        // get values from FORM
        var name = $("input#name").val();
-       var question1 = $("input#question1").val();
-       var question2 = $("input#question2").val();
-	   var question3 = $("input#question3").val();
-	   var question4 = $("input#question4").val();
+       var question1 = $("textarea#question1").val();
+       var question2 = $("textarea#question2").val();
+	   var question3 = $("textarea#question3").val();
+	   var question4 = $("textarea#question4").val();
         var firstName = name; // For Success/Failure Message
            // Check for white space in name for Success/Fail message
         if (firstName.indexOf(' ') >= 0) {
