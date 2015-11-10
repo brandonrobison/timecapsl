@@ -35,7 +35,7 @@ $config['FormMailerTemplates'] = array(
     'template' => 'emails/contact_form.html',
     'replyTo' => true
   ),
-  'questionnaire' => array(
+  'questionnaire_form' => array(
     'subject' => function ($form) {
       return "New Client / Pre-Interview Questionnaire from $form->name";
     },
