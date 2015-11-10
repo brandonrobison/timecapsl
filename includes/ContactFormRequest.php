@@ -62,7 +62,7 @@ class ContactFormRequest {
     if ($this->template['replyTo']) {
       $mail->addReplyTo($form->email, $form->name);
     }
-    $mail->isHTML(false);
+    $mail->isHTML(true);
 
     $mail->Subject = $this->subject($form);
     $mail->Body = $this->renderContactFormEmail($form);
