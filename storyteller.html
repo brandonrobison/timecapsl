@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>timecapsl</title>
+
+	<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+	
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	
+
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="questionnaire navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html#page-top"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <section id="storyteller">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">think like a storyteller</h2>
+                    <hr class="primary">
+                    <p>Your interview is not simply a session of questions and answers; it's an opportunity to share and preserve your life's story. We've carefully crafted this short exercise to help you begin to think like a storyteller. Please take your time and answer the four questions below in as vivid detail as possible. If you require more space, don't hesitate to include additional pages. Thanks!</p>
+                </div>
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+                    <form name="sentMessage" class="well" id="storytellerForm" novalidate>
+						<div class="control-group">
+							<div class="controls">
+							<input type="text" class="form-control" placeholder="Your Full Name" id="name" required
+								   data-validation-required-message="Please enter your name" />
+							<p class="help-block"></p>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+							<textarea rows="10" cols="100" class="form-control" 
+								placeholder="Please describe the home and neighborhood in which you grew up. Tell us about your room, where your family spent most of its time, and what it was like to grow up there." id="question1" required
+								data-validation-required-message="Please tell us about some of the important people in your life"
+								maxlength="9999" style="resize:none"></textarea>
+							<p class="help-block"></p>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+							<textarea rows="10" cols="100" class="form-control" 
+								placeholder="What are you most passionate about in this world? How did you discover this passion, and what have you done to embrace and explore it?" id="question2" required
+								maxlength="9999" style="resize:none"></textarea> 
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+							<textarea rows="10" cols="100" class="form-control" 
+								placeholder="Write about the happiest time in your life. Why do you feel so strongly about this particular time and what separates it from other happy periods of your life?" id="question3" required
+								maxlength="9999" style="resize:none"></textarea>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+							<textarea rows="10" cols="100" class="form-control" 
+								placeholder="What do you want to be remembered for after you pass on? What legacy do you want to leave to your loved ones?" id="question4" required
+								data-validation-required-message="Please tell us about your career(s)."
+								maxlength="9999" style="resize:none"></textarea>
+							<p class="help-block"></p>
+							</div>
+						</div>
+						<div class="g-recaptcha" data-sitekey="6Lf7wA0TAAAAAJJg1aHviZY5SDLSK5gg7D6DokWw"></div>
+						<p id="recaptcha-error" class="help-block hidden"></p>
+						<div id="success"> </div> <!-- For success/fail messages -->
+						<button type="submit" class="btn btn-primary pull-right">Send</button><br />
+					</form>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+	
+	<!-- Other JavaScript dependencies -->
+	<script src="js/jqBootstrapValidation.js"></script>
+	<script src="js/storyteller.js"></script>
+	
+	
+		<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.fancybox').fancybox({
+		  helpers: {
+			overlay: {
+			  locked: false
+			}
+		  }
+		});
+	});
+	
+	</script>
+	
+
+</body>
+
+</html>
