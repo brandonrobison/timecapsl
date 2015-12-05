@@ -1,7 +1,7 @@
 <?php namespace Timecapsl;
 
-require __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/config.php';
+require '../vendor/autoload.php';
+require_once '../config.php';
 
 // questionnaire.php
 // Sends an email from the site new client / pre interview questionnaire to the site admin
