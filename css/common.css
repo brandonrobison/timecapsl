@@ -1,0 +1,5 @@
+.fancybox-dialog-contents {
+  display: none;
+  max-width: 800px;
+  overflow: auto;
+}
