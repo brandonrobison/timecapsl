@@ -86,7 +86,7 @@ aside {
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    background-image: url(../img/logo3.png);
+    background-image: url(../img/logo-orange.png);
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
@@ -131,13 +131,13 @@ aside {
 
     .navbar-default .navbar-header .navbar-brand {
         color: rgba(255,255,255,.7);
-		background-image: url(../img/logo1.png);
+		background-image: url(../img/logo-white.png);
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
         color: #fff;
-		background-image: url(../img/logo2.png);
+		background-image: url(../img/logo-white-hover.png);
     }
 
     .navbar-default .nav > li>a,
@@ -158,13 +158,13 @@ aside {
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
         color: #f05f40;
-		background-image: url(../img/logo3.png);
+		background-image: url(../img/logo-orange.png);
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
         color: #eb3812;
-		background-image: url(../img/logo4.png);
+		background-image: url(../img/logo-orange-hover.png);
     }
 
     .navbar-default.affix .nav > li>a,
