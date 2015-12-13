@@ -3,3 +3,13 @@
   max-width: 800px;
   overflow: auto;
 }
+
+.pricing-section {
+  margin: 50px 0;
+}
+
+@media(min-width:768px) {
+  .pricing-section {
+    padding: 0 50px;
+  }
+}
