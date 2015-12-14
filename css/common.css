@@ -23,3 +23,15 @@
     padding: 0 50px;
   }
 }
+
+/*
+  Adds an offset to an anchor target to prevent the fixed navigation bar from
+  covering up the target's content. The margin and padding size should be
+  adjusted if the navigation bar size is ever changed.
+*/
+.anchor-target:before {
+  content: "";
+  display: block;
+  margin-top: -70px;
+  padding-top: 70px;
+}
