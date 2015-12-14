@@ -87,14 +87,14 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand {
     background-image: url(../img/logo-orange.png);
-	background-size: 125px 50px;
-	background-repeat: no-repeat;
+    background-size: 125px 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
     color: #f05f40;
-    margin-left: -10px;
-	width: 140px;
+    width: 140px;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
